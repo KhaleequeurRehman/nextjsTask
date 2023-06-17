@@ -4,13 +4,14 @@ import Card from './components/Card';
 import {dropdownsArr} from '@/app/config';
 
 const fetchCarsData = async () => {
-  const url = process.env.NEXT_PUBLIC_URL;
+  
+  const url = 'https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?model=corolla&limit=8'
 
   const options = {
       method: 'GET',
       headers: {
-          'X-RapidAPI-Key': process.env.NEXT_PUBLIC_X_RAPIDAPI_KEY,
-          'X-RapidAPI-Host': process.env.NEXT_PUBLIC_X_RAPIDAPI_HOST
+          'X-RapidAPI-Key': '5cd6d7215bmsh5dcea764a05ee20p1ac13ejsnbe236c43938c',
+          'X-RapidAPI-Host': 'cars-by-api-ninjas.p.rapidapi.com'
       }
   };
 
