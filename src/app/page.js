@@ -5,18 +5,18 @@ import {dropdownsArr} from '@/app/config';
 
 const fetchCarsData = async () => {
   
-  const url = 'https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?model=corolla&limit=8'
+  const url = process.env.Url
 
   const options = {
       method: 'GET',
       headers: {
-          'X-RapidAPI-Key': '5cd6d7215bmsh5dcea764a05ee20p1ac13ejsnbe236c43938c',
-          'X-RapidAPI-Host': 'cars-by-api-ninjas.p.rapidapi.com'
+          'X-RapidAPI-Key': process.env.X_RapidAPI_Key,
+          'X-RapidAPI-Host': process.env.X_RapidAPI_Host
       }
   };
 
   try {
-        const res = await fetch(url, options,{cache:'no-store'});
+        const res = await fetch(url, options);
         const data = await res.json();
         console.log('cars data ',data)
       
