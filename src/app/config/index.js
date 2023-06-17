@@ -1,0 +1,1 @@
+export const dropdownsArr = ["Price","Manufacture","Type","Rating"];
