@@ -15,7 +15,7 @@ const fetchCarsData = async () => {
   };
 
   try {
-        const res = await fetch(url, options);
+        const res = await fetch(url, options,{cache:'no-store'});
         const data = await res.json();
         console.log('cars data ',data)
       
